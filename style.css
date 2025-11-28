@@ -10,6 +10,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
 /* Section Principale  */
@@ -126,17 +127,32 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #fea116 2px solid;
+  /* border: #fea116 2px solid; */
 }
 .right {
-  border: #0cfe79 2px solid;
+  /* border: #0cfe79 2px solid; */
   width: 50%;
   display: flex;
   justify-content: flex-end;
 }
+
+@keyframes rote {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+
 .right img {
   width: 90%;
-  border: #1826e0 2px solid;
+  animation: rote 60s linear infinite;
+  /* border: #1826e0 2px solid; */
 }
 .left {
   width: 50%;
@@ -153,11 +169,39 @@ button:hover {
   line-height: 1.2;
 }
 
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1024px) {
   .icons-menu {
     display: block;
   }
   nav {
     display: none;
+  }
+
+  .sect-1{
+    flex-direction: column;
+    text-align: center;
+  }
+  .left{
+    width: 100%;
+    justify-content: center;
+  }
+  .right{
+    width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .right img{
+    width: 70%;
+  }
+  .left h1 {
+    font-size: 48px;
   }
 }

@@ -204,4 +204,7 @@ button:hover {
   .left h1 {
     font-size: 48px;
   }
+  #first-section{
+    max-width: 100%;
+  }
 }
